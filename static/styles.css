@@ -1,0 +1,274 @@
+/*layout*/
+
+body {
+    background-color: #CDFFFF;
+    color: #0D0DA4;
+    font-family: cursive;
+  }
+
+.navbar-brand {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-link {
+    display: block;
+    color: #8709B3;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+   }
+
+.nav-link:hover {
+     color: #D661FF;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 0.7rem;
+    transition: box-shadow .15s ease-in-out;
+}
+.navbar-toggler-icon {
+    background-image: url(https://www.pngkey.com/png/full/525-5256562_blue-arrow-down-transparent-png-down-arrow-icon.png);
+    display: inline-block;
+    width: 1.5em;
+    height: 2em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.border {
+    border-bottom: thick double #FDB0FA!important;
+}
+
+/*my games*/
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+}
+
+img {
+    border-radius: 8px;
+    height: auto;
+    max-width: 100%;
+  }
+
+.dropdown-menu {
+    background-color: #C4FF95;
+}
+
+.dropdown-item {
+    padding: 0.05rem 0.5rem;
+}
+
+.dropdown-item:hover {
+    background-color: #91E34F;
+    }
+
+.dropdown-divider {
+    border-top: 1px solid #59BB0A;
+}
+
+
+/* add a game */
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #F9E2FF !important;
+    background-clip: padding-box;
+    border: 1px solid #BD50DA;
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-dialog {
+    max-width: 800px;
+}
+
+.form-control {
+    background-color: #F9E2FF;
+    border: 1px solid #BD50DA;
+}
+
+::placeholder {
+    color: #911DB0!important;
+    opacity: 1;
+  }
+
+.form-control:focus {
+background-color: #F9E2FF;
+}
+
+#addbutton {
+    position: fixed;
+    bottom: -50px;
+    right: 10px;
+    transition: 0.3s;
+}
+
+#addbutton:hover {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transform: scale(1.3) perspective(1px)
+}
+
+
+/* random */
+#greeting_text{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#box {
+    border: 1rem double #00E4FF;
+    height: 250px;
+    width: 250px;
+    margin:auto;
+  }
+
+.modal-backdrop {
+    background-color:  rgba(0, 0, 0, 0.2)!important;
+}
+
+#box1{
+    justify-content:flex-start;
+    width: 500px;
+}
+
+#box3{
+    margin: 150px auto auto auto;
+    width: 400px;
+
+}
+
+#start {
+    position: sticky;
+    top:45%;
+    left:40%;
+    font-size: 2rem;
+    padding: 0.7rem 1.3rem;
+    border: 2rem double;
+}
+
+#player_button, #order_button {
+    font-size: 1.7rem;
+    padding: 0.7rem 1.3rem;
+    margin: auto;
+}
+
+.boxes {
+    margin: 100px auto 80px auto;
+    display: flex;
+    align-items: top;
+    justify-content: space-evenly;
+  }
+
+/* help sign */
+.help-tip{
+    text-align: center;
+    background-color: #BCDBEA;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 26px;
+    cursor: default;
+}
+
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color:#fff;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    opacity:1;
+    }
+
+  /* Tooltip text */
+  .tooltiptext {
+    visibility: hidden;
+    width: 380px;
+    top: 130%;
+    left: 50%;
+    margin-left: -360px;
+    background-color: #E6B9FF;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+/* add a site */
+
+#addsite {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: 0.3s;
+}
+
+#addsite:hover {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    transform: scale(1.3) perspective(1px)
+}
+
+.site.modal-dialog {
+    max-width: 500px;
+}
+
+.delete_button{
+    background-color:#FFA107;
+}
+
+.table.site{
+    font-size:23px;
+    border: 4mm ridge rgba(111, 255, 89, .8);
+}
+
+.site td{
+    border-style: none;
+}

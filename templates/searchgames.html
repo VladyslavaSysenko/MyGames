@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search games
+{% endblock %}
+
+{% block main %}
+    <h1>Sites where you can search for a new game</h1>
+    <main class="container py-5 text-center">
+
+    <table class="table table-warning site" style="width:45%; margin:auto">
+        <!-- show sites with preview -->
+        <tbody>
+            {% for site in sites %}
+            <tr>
+                <td><a href="{{ site.url }}" class="btn btn-warning btn-lg" style="min-width:60%; background-color:#FFF300; border-color:#FFF300">Go to "<span>{{ site.name }}"</span></a></td>
+                <td>
+                    <form action="/delete_site" method="post">
+                        <input name="site_id" type="hidden" value="{{ site.site_id }}">
+                        <button class="btn btn-warning btn-sm delete_button" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- add a site -->
+    <button type="button" class="btn btn-warning" id="addsite" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Add a site</button>
+    <form action="/add_site" method="POST" class="mb-3">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="site modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- name -->
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus required class="form-control mx-auto w-25" name="name" placeholder="Name *" type="text">
+                        </div>
+                        <!-- url -->
+                        <div class="mb-3">
+                            <input required autocomplete="off" class="form-control mx-auto w-25" name="url" placeholder="URL *" type="url">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info">Add a site</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}
